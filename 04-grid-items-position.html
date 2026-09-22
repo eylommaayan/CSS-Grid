@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>שינוי מיקום של Grid Items</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .lesson {
+        background: #f4f6fa;
+        border-right: 5px solid royalblue;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .lesson h2 {
+        margin: 0 0 10px;
+        direction: ltr;
+        text-align: right;
+        color: royalblue;
+      }
+
+      .container {
+        width: 800px;
+        height: 450px;
+        background-color: #ddd;
+        margin: 40px auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+      }
+      .item {
+        padding: 30px;
+        font-size: 30px;
+        color: #fff;
+      }
+
+      /* item 1 הוזז שורה 2 עמודה 3 */
+      .item-1 {
+        background-color: orangered;
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+      }
+      /* item 2 נמתח על 2 שורות בעמודה 2 */
+      .item-2 {
+        background-color: olivedrab;
+        grid-area: 1 / 2 / 3 / 3;
+      }
+      .item-3 {
+        background-color: royalblue;
+      }
+      .item-4 {
+        background-color: palevioletred;
+      }
+      .item-5 {
+        background-color: goldenrod;
+      }
+      /* item 6 נמתח לרוחב שתי עמודות */
+      .item-6 {
+        background-color: blueviolet;
+        grid-column: 1 / span 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lesson">
+      <h2>4. שינוי מיקום של Grid Items</h2>
+      <p>
+        שליטה על מיקום הפריט ברשת לפי קווי הרשת (התחלה / סיום)[cite: 15, 21].
+        פריט 6 נמתח לרוחב שלוש עמודות עם <code>span 3</code>[cite: 15, 21].
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="item item-1">item 1</div>
+      <div class="item item-2">item 2</div>
+      <div class="item item-3">item 3</div>
+      <div class="item item-4">item 4</div>
+      <div class="item item-5">item 5</div>
+      <div class="item item-6">item 6</div>
+    </div>
+
+    <div><a href="index.html">← חזרה לתפריט</a></div>
+  </body>
+</html>

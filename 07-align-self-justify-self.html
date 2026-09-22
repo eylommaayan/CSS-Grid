@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>הגדרת מיקום לפריט בנפרד</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .lesson {
+        background: #f4f6fa;
+        border-right: 5px solid royalblue;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .lesson h2 {
+        margin: 0 0 10px;
+        direction: ltr;
+        text-align: right;
+        color: royalblue;
+      }
+
+      .container {
+        width: 600px;
+        background-color: #efefef;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 100px);
+        grid-gap: 1rem;
+      }
+      .item {
+        font-size: 1.5rem;
+        background-color: royalblue;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* פריט 3 מקבל הגדרות יישור עצמאיות ופריסה */
+      .item-3 {
+        background-color: #2b5cb8;
+        justify-self: center; /* יישור עצמאי במרכז התא לרוחב */
+        align-self: center; /* יישור עצמאי במרכז התא לגובה */
+        grid-row: 2 / 4;
+        grid-column: 1 / -1;
+        width: 80%;
+        height: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lesson">
+      <h2>7. להגדיר מיקום לפריט בנפרד</h2>
+      <p>
+        שימוש ב-<code>justify-self</code> וב-<code>align-self</code> על פריט
+        בודד (item 3) שדורס את ההגדרות הכלליות של המכולה ונמתח במרכז על פני מספר
+        שורות ועמודות[cite: 15, 23].
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item item-3">item 3 (נפרד במרכז)</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+    </div>
+
+    <div><a href="index.html">← חזרה לתפריט</a></div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>max-content, min-content, minmax</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .lesson {
+        background: #f4f6fa;
+        border-right: 5px solid royalblue;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .lesson h2 {
+        margin: 0 0 10px;
+        direction: ltr;
+        text-align: right;
+        color: royalblue;
+      }
+
+      .container {
+        width: 90%;
+        background-color: #ddd;
+        margin: 20px auto;
+        display: grid;
+        /* הדגמת minmax יחד עם min-content ו-max-content */
+        grid-template-columns: min-content max-content minmax(150px, 1fr);
+        grid-gap: 20px;
+        padding: 20px;
+      }
+      .item {
+        background-color: royalblue;
+        color: #fff;
+        padding: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lesson">
+      <h2>9. max-content, min-content ו-minmax()</h2>
+      <p>
+        <strong>min-content:</strong> מכווץ את העמודה למילה הארוכה ביותר מבלי
+        לחתוך[cite: 15].<br />
+        <strong>max-content:</strong> מרחיב את העמודה לכל רוחב הטקסט מבלי לשבור
+        שורות[cite: 15].<br />
+        <strong>minmax(150px, 1fr):</strong> מגדיר גבול תחתון של 150px וגבול
+        עליון גמיש של 1fr[cite: 15].
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="item">min-content: טקסט קצר שמתכווץ</div>
+      <div class="item">max-content: שורה ארוכה שלא נשברת כלל</div>
+      <div class="item">minmax(150px, 1fr): עמודה רספונסיבית</div>
+    </div>
+
+    <div><a href="index.html">← חזרה לתפריט</a></div>
+  </body>
+</html>

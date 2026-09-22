@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>יחידות Fractional (fr)</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .lesson {
+        background: #f4f6fa;
+        border-right: 5px solid royalblue;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .lesson h2 {
+        margin: 0 0 10px;
+        direction: ltr;
+        text-align: right;
+        color: royalblue;
+      }
+
+      .container {
+        width: 800px;
+        height: 450px;
+        background-color: #ddd;
+        margin: 40px auto;
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 50% repeat(2, 1fr);
+        grid-gap: 30px;
+      }
+      .item {
+        padding: 30px;
+        font-size: 30px;
+        color: #fff;
+      }
+      .item-1 {
+        background-color: orangered;
+      }
+      .item-2 {
+        background-color: olivedrab;
+      }
+      .item-3 {
+        background-color: royalblue;
+      }
+      .item-4 {
+        background-color: palevioletred;
+      }
+      .item-5 {
+        background-color: goldenrod;
+      }
+      .item-6 {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lesson">
+      <h2>3. יחידות Fractional (fr)</h2>
+      <p>
+        יחידת <code>fr</code> מייצגת חלק יחסי מהמקום הפנוי. השורה הראשונה תופסת
+        <code>2fr</code> (פי 2 מהשנייה), והעמודה הראשונה תופסת 50% והשאר מחולקות
+        שווה ב-<code>repeat(2, 1fr)</code>[cite: 15, 20].
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="item item-1">item 1</div>
+      <div class="item item-2">item 2</div>
+      <div class="item item-3">item 3</div>
+      <div class="item item-4">item 4</div>
+      <div class="item item-5">item 5</div>
+      <div class="item item-6">item 6</div>
+    </div>
+
+    <div><a href="index.html">← חזרה לתפריט</a></div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>הזזת Grid בתוך המכולה</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .lesson {
+        background: #f4f6fa;
+        border-right: 5px solid royalblue;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .lesson h2 {
+        margin: 0 0 10px;
+        direction: ltr;
+        text-align: right;
+        color: royalblue;
+      }
+
+      .controls {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .controls button {
+        padding: 8px 14px;
+        margin: 4px;
+        cursor: pointer;
+      }
+
+      .container {
+        width: 700px;
+        height: 450px;
+        background-color: #efefef;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 120px);
+        grid-template-rows: repeat(4, 60px);
+        grid-gap: 10px;
+        /* ברירת מחדל */
+        justify-content: space-evenly;
+        align-content: space-evenly;
+      }
+      .item {
+        background-color: royalblue;
+        color: #fff;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lesson">
+      <h2>8. הזזת Grid בתוך המכולה (justify-content & align-content)</h2>
+      <p>
+        כאשר שטח ה-Grid קטן משטח המכולה (container), פקודות אלו קובעות כיצד הרשת
+        כולה תתמקם בתוך המכולה. לחץ על הכפתורים לבדיקה:
+      </p>
+    </div>
+
+    <div class="controls">
+      <button onclick="setGrid('start')">flex-start</button>
+      <button onclick="setGrid('center')">center</button>
+      <button onclick="setGrid('end')">flex-end</button>
+      <button onclick="setGrid('space-between')">space-between</button>
+      <button onclick="setGrid('space-around')">space-around</button>
+      <button onclick="setGrid('space-evenly')">space-evenly</button>
+    </div>
+
+    <div class="container" id="gridBox">
+      <div class="item">item 1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">item 4</div>
+      <div class="item">item 5</div>
+      <div class="item">item 6</div>
+      <div class="item">item 7</div>
+      <div class="item">item 8</div>
+    </div>
+
+    <script>
+      function setGrid(val) {
+        const g = document.getElementById("gridBox");
+        g.style.justifyContent = val;
+        g.style.alignContent = val;
+      }
+    </script>
+
+    <div style="margin-top: 20px"><a href="index.html">← חזרה לתפריט</a></div>
+  </body>
+</html>

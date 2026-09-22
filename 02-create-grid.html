@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>איך ליצור Grid</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .lesson {
+        background: #f4f6fa;
+        border-right: 5px solid royalblue;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .lesson h2 {
+        margin: 0 0 10px;
+        direction: ltr;
+        text-align: right;
+        color: royalblue;
+      }
+
+      .container {
+        width: 800px;
+        background-color: #ddd;
+        margin: 40px auto;
+        display: grid;
+        grid-template-rows: 150px 150px;
+        grid-template-columns: 150px 150px 150px;
+        grid-row-gap: 30px;
+        grid-column-gap: 50px;
+      }
+      .item {
+        padding: 30px;
+        font-size: 30px;
+        color: #fff;
+      }
+      .item-1 {
+        background-color: orangered;
+      }
+      .item-2 {
+        background-color: green;
+      }
+      .item-3 {
+        background-color: royalblue;
+      }
+      .item-4 {
+        background-color: palevioletred;
+      }
+      .item-5 {
+        background-color: goldenrod;
+      }
+      .item-6 {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lesson">
+      <h2>2. איך ליצור Grid</h2>
+      <p>
+        הפעלת <code>display: grid</code>, קביעת שורות בגובה 150px ועמודות ברוחב
+        150px, עם מרווחי <code>gap</code>[cite: 15, 19]. אם יש 3 עמודות, ישנם 4
+        קווי רשת (Grid Lines)[cite: 16].
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="item item-1">item 1</div>
+      <div class="item item-2">item 2</div>
+      <div class="item item-3">item 3</div>
+      <div class="item item-4">item 4</div>
+      <div class="item item-5">item 5</div>
+      <div class="item item-6">item 6</div>
+    </div>
+
+    <div><a href="index.html">← חזרה לתפריט</a></div>
+  </body>
+</html>
